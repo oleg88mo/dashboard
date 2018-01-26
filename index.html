@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Oleg88mo</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <a href="/" class="logo">LOGO eXAMPLE</a>
+    </div>
+    <div class="header-right">
+        <div class="column-left">
+            <button type="button" class="view view-list-1"></button>
+            <button type="button" class="view view-list-2 active"></button>
+            <button type="button" class="view view-list-3"></button>
+            <button type="button" class="view view-list-4"></button>
+        </div>
+        <div class="column-right">
+            <div class="inline-block">
+                <button type="button" class="header--btn__save default-style-btn relative">Saved</button>
+            </div>
+            <div class="inline-block">
+                <button type="button" class="header--btn__create default-style-btn">Create</button>
+            </div>
+            <div class="inline-block header-multiple-menu">
+                <ul>
+                    <li>
+                        <button type="button"
+                                class="header-multiple-btn header-multiple-btn__share default-style-btn"></button>
+                    </li>
+                    <li>
+                        <button type="button" onclick="toggle_dropdown(this);"
+                                class="btn_toggle_dropdown multiple-btn header-multiple-btn__design default-style-btn"></button>
+                        <div class="dropdown __design">
+                            <section>
+                                <p class="dropdown--title">Design</p>
+                                <div class="overflow-auto">
+                                    <div class="block">
+                                        <button type="button" onclick="toggle_dropdown(this);"
+                                                class="btn_toggle_dropdown default-style-btn on">Layout
+                                        </button>
+                                        <div class="dropdown on">
+                                            <div class="relative sel">
+                                                <span>Header</span>
+                                                <select>
+                                                    <option value="Category">Category</option>
+                                                    <option value="Category #-1-#">Category #-1-#</option>
+                                                    <option value="Category #-2-#">Category #-2-#</option>
+                                                </select>
+                                            </div>
+                                            <div class="relative sel">
+                                                <span>Subheader</span>
+                                                <select>
+                                                    <option value="Status">Status</option>
+                                                    <option value="Status #-1-#">Status #-1-#</option>
+                                                    <option value="Status #-2-#">Status #-2-#</option>
+                                                </select>
+                                            </div>
+                                            <div class="relative sel">
+                                                <span>Item label</span>
+                                                <select>
+                                                    <option value="Task name">Task name</option>
+                                                    <option value="Task name #-1-#">Task name #-1-#</option>
+                                                    <option value="Task name #-2-#">Task name #-2-#</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <button type="button" onclick="toggle_dropdown(this);"
+                                                class="btn_toggle_dropdown default-style-btn on">Colors
+                                        </button>
+                                        <div class="dropdown on">
+                                            <div class="relative sel">
+                                                <span>Color by</span>
+                                                <select>
+                                                    <option value="Status">Status</option>
+                                                    <option value="Status #-1-#">Status #-1-#</option>
+                                                    <option value="Status #-2-#">Status #-2-#</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <input id="Subheader-input" type="checkbox" class="hidden">
+                                                <label for="Subheader-input">Subheader inherits header color</label>
+                                            </div>
+                                            <div class="relative text-right color m-t-30">
+                                                <span class="text-left m-b-10">Header color</span>
+                                                <p class="color __color-light-blue">Header</p>
+                                                <p class="color __color-blue-opacity"></p>
+                                                <p class="color __color-blue"></p>
+                                            </div>
+                                            <div class="relative text-right color m-t-30">
+                                                <span class="text-left m-b-10">Subheaders color</span>
+                                                <p class="color __color-pink">Research</p>
+                                                <p class="color __color-yellow">In progress</p>
+                                                <p class="color __color-green">Backlog</p>
+                                                <p class="color __color-red">Reopened</p>
+                                                <p class="color __color-blue">New</p>
+                                                <p class="color __color-dark-grey">None</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button"
+                                class="multiple-btn header-multiple-btn__setting default-style-btn"></button>
+                    </li>
+                    <li>
+                        <button type="button"
+                                class="multiple-btn header-multiple-btn__notification default-style-btn"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="relative section-on-top">
+        <span class="rotate calendar">
+            <span class="calendar-ico"></span>
+        </span>
+
+        <div class="row">
+            <div class="left">
+                <span class="left-label left-label-height-small">01.01.16 - 01.01.18</span>
+            </div>
+            <div class="right">
+                <div class="filter">
+                    <div class="filter-left-column">Jan 1, 2016</div>
+                    <div class="filter-center-column relative">
+                        <span class="top-line"></span>
+                        <span class="bottom-line"></span>
+                    </div>
+                    <div class="filter-right-column">Nov 1, 2017</div>
+                </div>
+                <div class="parent relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium">Q1'16</span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium">Q2'16</span>
+                    <span class="parent-column parent_column_3 parent-column-width-small">J'16</span>
+                    <span class="parent-column parent_column_4 parent-column-width-small">A'16</span>
+                    <span class="parent-column parent_column_5 parent-column-width-small">S'16</span>
+                    <span class="parent-column parent_column_6 parent-column-width-small">O'16</span>
+                    <span class="parent-column parent_column_7 parent-column-width-small">N'16</span>
+                    <span class="parent-column parent_column_8 parent-column-width-small">D'16</span>
+                    <span class="parent-column parent_column_9 parent-column-width-large">H1'17</span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium">Q3'17</span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium">Q4'17</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="relative">
+        <span class="rotate">
+            <span>Design ux</span>
+        </span>
+
+        <div class="row">
+            <div class="left">
+                <span class="left-label left-label-color-pink left-label-height-small">Research</span>
+                <span class="left-label left-label-color-yellow left-label-height-small">In progress</span>
+                <span class="left-label left-label-color-green left-label-height-large">Backlog</span>
+            </div>
+            <div class="right">
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-small parent_content_position_column_3 parent-content-color-pink">Dass...</span>
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_6 parent-content-color-pink">Template</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-large parent_content_position_column_1 parent-content-color-yellow">UX</span>
+                    <span class="parent-content parent-content-width-small parent_content_position_column_9 parent-content-color-yellow">Flo...</span>
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_10 parent-content-color-yellow">UX</span>
+                </div>
+
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-small parent_content_position_column_7 parent-content-color-green">Flat...</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_1 parent_content_position_column_left75 parent-content-color-green">Prototyping</span>
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_9 parent_content_position_column_left205 parent-content-color-green">Private Policy</span>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="relative">
+        <span class="rotate">
+            <span>Slicing</span>
+        </span>
+
+        <div class="row">
+            <div class="left">
+                <span class="left-label left-label-color-pink left-label-height-small">Research</span>
+                <span class="left-label left-label-color-yellow left-label-height-large">In progress</span>
+                <span class="left-label left-label-color-red left-label-height-large">REOPENED</span>
+                <span class="left-label left-label-color-dark-grey left-label-height-large">sTATUS: NONE</span>
+            </div>
+            <div class="right">
+                <div class="parent parent-height-small relative">
+
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_5 parent-content-color-yellow">Home page Design</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-small parent_content_position_column_2 parent-content-color-yellow">...</span>
+                </div>
+
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_4 parent-content-color-red">Home page Design</span>
+                    <span class="parent-content parent-content-width-small-large parent_content_position_column_10 parent-content-color-red">Buttons</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_1 parent_content_position_column_left75 parent-content-color-red">Planing</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_3 parent-content-color-dark-grey">Terra</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_9 parent-content-color-dark-grey">Incognito</span>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="relative">
+        <span class="rotate">
+            <span>architecture</span>
+        </span>
+
+        <div class="row">
+            <div class="left">
+                <span class="left-label left-label-color-pink left-label-height-small">Research</span>
+                <span class="left-label left-label-color-yellow left-label-height-small">In progress</span>
+                <span class="left-label left-label-color-green left-label-height-large">Backlog</span>
+                <span class="left-label left-label-color-blue left-label-height-small">new</span>
+                <span class="left-label left-label-color-purple left-label-height-small">Completed</span>
+            </div>
+            <div class="right">
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-small parent_content_position_column_3 parent-content-color-pink">Dass...</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-small parent_content_position_column_9 parent-content-color-yellow">Flo...</span>
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_10 parent-content-color-yellow">UX</span>
+                </div>
+
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-small parent_content_position_column_7 parent-content-color-green">Flat</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-large parent_content_position_column_1 parent-content-color-green">Prototyping</span>
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_9 parent-content-color-green">Private Policy</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_9 parent-content-color-blue">Programming</span>
+                </div>
+
+                <div class="parent parent-height-small relative">
+                    <span class="parent-column parent_column_1 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_2 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_3 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_4 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_5 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_6 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_7 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_8 parent-column-width-small"></span>
+                    <span class="parent-column parent_column_9 parent-column-width-large"></span>
+                    <span class="parent-column parent_column_10 parent-column-width-medium"></span>
+                    <span class="parent-column parent_column_11 parent-column-width-medium"></span>
+
+                    <span class="parent-content parent-content-width-medium parent_content_position_column_1 parent-content-color-purple">Meeting</span>
+                    <span class="parent-content parent-content-width-small parent_content_position_column_4 parent-content-color-purple">Me...</span>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class="legend">
+        <button class="legend-btn-toggle" onclick="toggle_legend();"></button>
+        <span class="legend-title">status:</span>
+        <ul>
+            <li><span class="legend-color-pink">Research</span></li>
+            <li><span class="legend-color-yellow">In progress</span></li>
+            <li><span class="legend-color-green">Backlog</span></li>
+            <li><span class="legend-color-red">Reopened</span></li>
+            <li><span class="legend-color-blue">New</span></li>
+            <li><span class="legend-color-dark-grey">None</span></li>
+        </ul>
+    </div>
+
+    <button type="button" class="full-screan-dashboard"></button>
+</main>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(window).resize(function () {
+        var parent_column_1 = $('.parent_column_1').position().left;
+        var parent_column_2 = $('.parent_column_2').position().left;
+        var parent_column_3 = $('.parent_column_3').position().left;
+        var parent_column_4 = $('.parent_column_4').position().left;
+        var parent_column_5 = $('.parent_column_5').position().left;
+        var parent_column_6 = $('.parent_column_6').position().left;
+        var parent_column_7 = $('.parent_column_7').position().left;
+        var parent_column_8 = $('.parent_column_8').position().left;
+        var parent_column_9 = $('.parent_column_9').position().left;
+        var parent_column_10 = $('.parent_column_10').position().left;
+        var parent_column_11 = $('.parent_column_11').position().left;
+
+        $('.parent_content_position_column_1').css('left', parent_column_1 + 'px');
+
+        $('.parent_content_position_column_2').css('left', parent_column_2 + 'px');
+        $('.parent_content_position_column_3').css('left', parent_column_3 + 'px');
+        $('.parent_content_position_column_4').css('left', parent_column_4 + 'px');
+        $('.parent_content_position_column_5').css('left', parent_column_5 + 'px');
+        $('.parent_content_position_column_6').css('left', parent_column_6 + 'px');
+        $('.parent_content_position_column_7').css('left', parent_column_7 + 'px');
+        $('.parent_content_position_column_8').css('left', parent_column_8 + 'px');
+        $('.parent_content_position_column_9').css('left', parent_column_9 + 'px');
+        $('.parent_content_position_column_10').css('left', parent_column_10 + 'px');
+        $('.parent_content_position_column_11').css('left', parent_column_11 + 'px');
+    });
+
+    var parent_column_1 = $('.parent_column_1').position().left;
+    var parent_column_2 = $('.parent_column_2').position().left;
+    var parent_column_3 = $('.parent_column_3').position().left;
+    var parent_column_4 = $('.parent_column_4').position().left;
+    var parent_column_5 = $('.parent_column_5').position().left;
+    var parent_column_6 = $('.parent_column_6').position().left;
+    var parent_column_7 = $('.parent_column_7').position().left;
+    var parent_column_8 = $('.parent_column_8').position().left;
+    var parent_column_9 = $('.parent_column_9').position().left;
+    var parent_column_10 = $('.parent_column_10').position().left;
+    var parent_column_11 = $('.parent_column_11').position().left;
+
+    $('.parent_content_position_column_1').css('left', parent_column_1 + 'px');
+    $('.parent_content_position_column_2').css('left', parent_column_2 + 'px');
+    $('.parent_content_position_column_3').css('left', parent_column_3 + 'px');
+    $('.parent_content_position_column_4').css('left', parent_column_4 + 'px');
+    $('.parent_content_position_column_5').css('left', parent_column_5 + 'px');
+    $('.parent_content_position_column_6').css('left', parent_column_6 + 'px');
+    $('.parent_content_position_column_7').css('left', parent_column_7 + 'px');
+    $('.parent_content_position_column_8').css('left', parent_column_8 + 'px');
+    $('.parent_content_position_column_9').css('left', parent_column_9 + 'px');
+    $('.parent_content_position_column_10').css('left', parent_column_10 + 'px');
+    $('.parent_content_position_column_11').css('left', parent_column_11 + 'px');
+
+
+    //    var parent_column_9_plus_left205 = $('.parent_column_9').position().left;
+    //    $('.parent_content_position_column_left205').css('left', parent_column_9_plus_left205 + 205 +'px');
+
+
+    function toggle_dropdown(_this) {
+        $(_this).siblings('.dropdown').toggleClass('on');
+
+
+        if ($(_this).hasClass('on')) {
+            $(_this).removeClass('on');
+        } else {
+            $(_this).addClass('on');
+        }
+    }
+
+    function toggle_legend() {
+        $('.legend').addClass('on');
+    }
+
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest(".dropdown, .btn_toggle_dropdown").length) {
+            if ($('.dropdown, .btn_toggle_dropdown').is(":visible")) {
+                $('.dropdown').removeClass('on');
+                $('.btn_toggle_dropdown').removeClass('on');
+            }
+        }
+    });
+
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest(".legend").length) {
+            if ($('.legend, .legend-btn-toggle').is(":visible")) {
+                $('.legend').removeClass('on');
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>
