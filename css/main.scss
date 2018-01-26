@@ -10,7 +10,7 @@ html, body {
 }
 body.on{
   overflow: hidden;
-  padding-right: 15px;
+  padding-right: 17px;
 }
 .relative {
   position: relative;
@@ -520,7 +520,7 @@ section.section-on-top {
   section {
     position: absolute;
     left: 0;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 77px);
     background-color: #fff;
     z-index: 5;
     top: -3px;
@@ -545,8 +545,8 @@ section.section-on-top {
 .header-multiple-menu {
   .dropdown.__design {
     section {
-      width: 325px;
-      left: -68px; 
+      width: 326px;
+      left: -68px;
     }
     .dropdown--title:before {
       content: '';
