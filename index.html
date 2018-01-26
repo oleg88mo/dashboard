@@ -568,11 +568,12 @@
     function toggle_dropdown(_this) {
         $(_this).siblings('.dropdown').toggleClass('on');
 
-
         if ($(_this).hasClass('on')) {
             $(_this).removeClass('on');
+            $('body').removeClass('on');
         } else {
             $(_this).addClass('on');
+            $('body').addClass('on');
         }
     }
 
@@ -585,6 +586,7 @@
             if ($('.dropdown, .btn_toggle_dropdown').is(":visible")) {
                 $('.dropdown').removeClass('on');
                 $('.btn_toggle_dropdown').removeClass('on');
+                $('body').removeClass('on');
             }
         }
     });
